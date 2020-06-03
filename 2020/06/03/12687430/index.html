@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>12687430 | ZZT的小小博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="网络流总结算法网络流设 定义在二元组 上的实数函数且满足  容量限制：对于每条边，流经该边的流量不得超过该边的容量，即$f(u,v) \le c(u,v)$  斜对称性：每条边的流量与其相反边的流量之和为 0，即 $f(u,v) &#x3D; -f(v,u)$ 流守恒性：从源点流出的流量等于汇点流入的流量  最大流我们有一张图，要求从源点流向汇点的最大流量（可以有很多条路到达汇点），就是我们的最大流问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12687430">
+<meta property="og:url" content="http://yoursite.com/2020/06/03/12687430/index.html">
+<meta property="og:site_name" content="ZZT的小小博客">
+<meta property="og:description" content="网络流总结算法网络流设 定义在二元组 上的实数函数且满足  容量限制：对于每条边，流经该边的流量不得超过该边的容量，即$f(u,v) \le c(u,v)$  斜对称性：每条边的流量与其相反边的流量之和为 0，即 $f(u,v) &#x3D; -f(v,u)$ 流守恒性：从源点流出的流量等于汇点流入的流量  最大流我们有一张图，要求从源点流向汇点的最大流量（可以有很多条路到达汇点），就是我们的最大流问题。">
+<meta property="article:published_time" content="2020-06-03T14:18:58.353Z">
+<meta property="article:modified_time" content="2020-06-03T14:17:59.705Z">
+<meta property="article:author" content="zzt">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="ZZT的小小博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZZT的小小博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">zztzztzzt</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-12687430" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/03/12687430/" class="article-date">
+  <time datetime="2020-06-03T14:18:58.353Z" itemprop="datePublished">2020-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      12687430
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="网络流总结"><a href="#网络流总结" class="headerlink" title="网络流总结"></a>网络流总结</h1><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="网络流"><a href="#网络流" class="headerlink" title="网络流"></a>网络流</h3><p>设 定义在二元组 上的实数函数且满足</p>
+<ol>
+<li>容量限制：对于每条边，流经该边的流量不得超过该边的容量，即$f(u,v) \le c(u,v)$ </li>
+<li>斜对称性：每条边的流量与其相反边的流量之和为 0，即 $f(u,v) = -f(v,u)$</li>
+<li>流守恒性：从源点流出的流量等于汇点流入的流量</li>
+</ol>
+<h4 id="最大流"><a href="#最大流" class="headerlink" title="最大流"></a>最大流</h4><p>我们有一张图，要求从源点流向汇点的最大流量（可以有很多条路到达汇点），就是我们的最大流问题。</p>
+<h4 id="最小费用最大流"><a href="#最小费用最大流" class="headerlink" title="最小费用最大流"></a>最小费用最大流</h4><p>最小费用最大流问题是这样的：每条边都有一个费用，代表单位流量流过这条边的开销。我们要在求出最大流的同时，要求花费的费用最小。</p>
+<h4 id="最小割"><a href="#最小割" class="headerlink" title="最小割"></a>最小割</h4><p>割其实就是删边的意思，当然最小割就是割掉 $X$ 条边来让 $S$ 跟 $T$ 不互通。我们要求  $X$条边加起来的流量综合最小。这就是最小割问题。</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p><strong>Dinic 算法</strong> 的过程是这样的：每次增广前，我们先用 BFS 来将图分层。设源点的层数为 ，那么一个点的层数便是它离源点的最近距离。</p>
+<p>通过分层，我们可以干两件事情：</p>
+<ol>
+<li>如果不存在到汇点的增广路（即汇点的层数不存在），我们即可停止增广。</li>
+<li>确保我们找到的增广路是最短的。（原因见下文）</li>
+</ol>
+<p>接下来是 DFS 找增广路的过程。</p>
+<p>我们每次找增广路的时候，都只找比当前点层数多 的点进行增广（这样就可以确保我们找到的增广路是最短的）。</p>
+<p>Dinic 算法有两个优化：</p>
+<ol>
+<li><strong>多路增广</strong> ：每次找到一条增广路的时候，如果残余流量没有用完怎么办呢？我们可以利用残余部分流量，再找出一条增广路。这样就可以在一次 DFS 中找出多条增广路，大大提高了算法的效率。</li>
+<li><strong>当前弧优化</strong> ：如果一条边已经被增广过，那么它就没有可能被增广第二次。那么，我们下一次进行增广的时候，就可以不必再走那些已经被增广过的边。</li>
+</ol>
+<h3 id="最小费用最大流-1"><a href="#最小费用最大流-1" class="headerlink" title="最小费用最大流"></a>最小费用最大流</h3><p>网络流图中，花费最小的最大流被称为 <strong>最小费用最大流</strong> ，这也是接下来我们要研究的对象。</p>
+<h4 id="类似Dinic算法"><a href="#类似Dinic算法" class="headerlink" title="类似Dinic算法"></a>类似Dinic算法</h4><p>我们可以在 Dinic 算法的基础上进行改进，把 BFS 求分层图改为用 SPFA（由于有负权边，所以不能直接用 Dijkstra）来求一条单位费用之和最小的路径，也就是把 $w(u,v)$ 当做边权然后在残量网络上求最短路，当然在 DFS 中也要略作修改。这样就可以求得网络流图的 <strong>最小费用最大流</strong> 了。</p>
+<p>对于一条边 $(u,v,w,c)$（其中 $w$ 和  $c$ 分别为容量和费用），我们建立正向边 (u,v,w,c)和反向边 $(v,u,0,-c)$（其中 $-c$ 是使得从反向边经过时退回原来的费用）。</p>
+<h3 id="上下界网络流"><a href="#上下界网络流" class="headerlink" title="上下界网络流"></a>上下界网络流</h3><p>上下界网络流本质是给流量网络的每一条边设置了流量上界 $c(u,v)$ 和流量下界 $b(u,v)$ 。也就是说，一种可行的流必须满足 $b(u,v) \le f(u,v) \le c(u,v)$ 。同时必须满足除了源点和汇点之外的其余点流量平衡。</p>
+<h3 id="最大权闭合子图"><a href="#最大权闭合子图" class="headerlink" title="最大权闭合子图"></a>最大权闭合子图</h3><h4 id="闭合子图："><a href="#闭合子图：" class="headerlink" title="闭合子图："></a>闭合子图：</h4><ol>
+<li>它是一种子图 </li>
+<li>它还是有向图的子图</li>
+<li>它还可以一路走到底</li>
+<li>对于每个点，从它出发，<strong>能够走到的所有点都属于闭合子图中</strong></li>
+</ol>
+<p>最大权闭合子图就是原图中点权和最大的闭合子图。</p>
+<h4 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h4><p>最大权闭合子图问题可以使用<strong>最小割</strong>解决</p>
+<h5 id="连边方式"><a href="#连边方式" class="headerlink" title="连边方式"></a>连边方式</h5><ul>
+<li><p>对于所有原图中的边$ (u, v)$ ，连边 $u \rightarrow v$，容量为 $\inf$ 。</p>
+</li>
+<li><p>对于每个原图中的点 $u$ ，设 $u$ 的权值为 $val[u]$ ：</p>
+<ol>
+<li>若 $val[u] &gt; 0$（正权点），连边 $S \rightarrow u$ ，容量为 $val[u]$。</li>
+<li>若 $val[u] &lt; 0 $（负权点），连边 $u \rightarrow T$ ，容量为 $-val[u]$。</li>
+</ol>
+</li>
+</ul>
+<p>至于 $val[u] = 0$（零权点）的情况，向 $S$  还是 $T$连边对答案并没有影响。</p>
+<p>直接跑最小割,最大权 = 正点权和 - 最小割，而最大权闭合子图的节点就是与 $S$ 联通的部分。</p>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="拆点"><a href="#拆点" class="headerlink" title="拆点"></a>拆点</h3><p>对于一个有点权的点来说，拆点就是把一个点拆开为多个，这样可以方便把点权变成边权，满足题目的一些要求。</p>
+<h3 id="缩点"><a href="#缩点" class="headerlink" title="缩点"></a>缩点</h3><p>对于一些题来说，如果直接加点建边很有可能因为边和点过多而挂掉，此时就需要按照题意来进行建边上的优化。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/03/12687430/" data-id="ckazfu4320003rlgi67vm01me" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/06/03/12687417/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          12687417
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/03/intro/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">intro</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/03/12609724/">12609724</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12687451/">12687451</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12757279/">12757279</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12682648/">12682648</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12687417/">12687417</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 zzt<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

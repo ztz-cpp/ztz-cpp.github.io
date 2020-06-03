@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>test0523 | ZZT的小小博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="test 0523[TOC] T1 树上三角形得分情况期望：70-100 实际：10 改后： 题意给定一个大小为 $n$ 的有点权树，每次询问一对点$(u,v)$，问是否能在 $u$ 到 $v$ 的简单路径上取三个点权，以这三个权值为边长构成一个三角形。同时还需支持单点修改。 犯傻原因莫名其妙的树链剖分中线段数写挂了，然后没考虑到限制上传数量的优化…… 正解考虑到直接暴力，先求出LCA，然后发现路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="test0523">
+<meta property="og:url" content="http://yoursite.com/2020/06/03/test0523/index.html">
+<meta property="og:site_name" content="ZZT的小小博客">
+<meta property="og:description" content="test 0523[TOC] T1 树上三角形得分情况期望：70-100 实际：10 改后： 题意给定一个大小为 $n$ 的有点权树，每次询问一对点$(u,v)$，问是否能在 $u$ 到 $v$ 的简单路径上取三个点权，以这三个权值为边长构成一个三角形。同时还需支持单点修改。 犯傻原因莫名其妙的树链剖分中线段数写挂了，然后没考虑到限制上传数量的优化…… 正解考虑到直接暴力，先求出LCA，然后发现路">
+<meta property="article:published_time" content="2020-06-03T14:18:58.337Z">
+<meta property="article:modified_time" content="2020-06-03T14:17:01.617Z">
+<meta property="article:author" content="zzt">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="ZZT的小小博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZZT的小小博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">zztzztzzt</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-test0523" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/03/test0523/" class="article-date">
+  <time datetime="2020-06-03T14:18:58.337Z" itemprop="datePublished">2020-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      test0523
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="test-0523"><a href="#test-0523" class="headerlink" title="test 0523"></a>test 0523</h1><p>[TOC]</p>
+<h2 id="T1-树上三角形"><a href="#T1-树上三角形" class="headerlink" title="T1 树上三角形"></a>T1 树上三角形</h2><h3 id="得分情况"><a href="#得分情况" class="headerlink" title="得分情况"></a>得分情况</h3><p>期望：70-100</p>
+<p>实际：10</p>
+<p>改后：</p>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给定一个大小为 $n$ 的有点权树，每次询问一对点$(u,v)$，问是否能在 $u$ 到 $v$ 的简单路径上取三个点权，以这三个权值为边长构成一个三角形。同时还需支持单点修改。</p>
+<h3 id="犯傻原因"><a href="#犯傻原因" class="headerlink" title="犯傻原因"></a>犯傻原因</h3><p>莫名其妙的树链剖分中线段数写挂了，然后没考虑到限制上传数量的优化……</p>
+<h3 id="正解"><a href="#正解" class="headerlink" title="正解"></a>正解</h3><p>考虑到直接暴力，先求出LCA，然后发现路径长度为 $k$ ，我们知道，如果要满足<br>$$<br>a_i&gt;a_{i-1}+a_{i-2}<br>$$<br>极端请情况为斐波那契，那么所有数字在int范围内，所以最多50个数。</p>
+<p>若两点直接路径长度大于50,那么可以直接判断为可行。</p>
+<p>否则直接暴力，最后复杂度$O(q)$</p>
+<h2 id="T2-树上游戏"><a href="#T2-树上游戏" class="headerlink" title="T2 树上游戏"></a>T2 树上游戏</h2><h3 id="得分情况-1"><a href="#得分情况-1" class="headerlink" title="得分情况"></a>得分情况</h3><p>期望：100</p>
+<p>实际：100</p>
+<h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>Bob 发明了一种与树有关的游戏： 他从树中删除任意数量的边，计算删除后所有连通块大小的乘积， Bob 将得到这么多的分数。你的任务就是对于一颗给定的树，求出 Bob 能得到的 最大分数。</p>
+<h3 id="正解-1"><a href="#正解-1" class="headerlink" title="正解"></a>正解</h3><p>考虑树形DP</p>
+<p>设 $f_{x,j}$ 为点 $x$ 分为 $j$ 个联通块时的答案，那么就有<br>$$<br>f_{x,j}=\frac{f_{x,k}}{k} \times \frac{f_{y,j-k}}{j-k} \times j (y\in x’s\ son)<br>$$<br>然后宁高精就水过了，不过有个玄学优化，为了避免再写个高精除，可以设<br>$$<br>g_{x,j}=\frac{f_{x,j}}{j}<br>$$<br>那么就显然了</p>
+<h2 id="T3-树上路径"><a href="#T3-树上路径" class="headerlink" title="T3 树上路径"></a>T3 树上路径</h2><h3 id="得分情况-2"><a href="#得分情况-2" class="headerlink" title="得分情况"></a>得分情况</h3><p>期望：0</p>
+<p>实际：0</p>
+<h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>古时候帝国有 $n$ 个城堡，编号从 $1$ 到 $n$。除了皇帝拥有的城堡之外，其他每 个城堡都从属于某个城堡。如果两个城堡有直接从属关系，则有一条双向路径连 接两个城堡，保证整个帝国的所有城堡互相可达。 每一年，野蛮人有可能对某一个城堡 $c$ 发起攻击，所到之处，寸草不生。此 外，野蛮人不会对同一个城堡发起多次攻击。 如果某一年野蛮人没有攻击，则骑士就会出来巡逻，巡逻路线是从城堡 $a$ 到 城堡 $b$ 且不会多次经过同一个城堡。在巡逻时，骑士需要休息，但是他不会选择 y 年后被攻击的城堡休息。具体地说，城堡 $a$ 到城堡 $b$（不含 $a$ 和 $b$）的路线 中，第 k 个在 y+1 年后没被攻击的城堡会被骑士选做休息地点。 你的任务就是计算每次骑士巡逻的休息地点。</p>
+<h3 id="犯傻原因-1"><a href="#犯傻原因-1" class="headerlink" title="犯傻原因"></a>犯傻原因</h3><p>暴力最后没写出来（不过据说这个暴力在这个水数据下可以A？）</p>
+<h3 id="正解-2"><a href="#正解-2" class="headerlink" title="正解"></a>正解</h3><h2 id="考试总结"><a href="#考试总结" class="headerlink" title="考试总结"></a>考试总结</h2><p>T1没有仔细想就开始写了，没能想到更简便的方法，写树链剖分浪费了许多时间还写错了……</p>
+<p>T2还好过了但调试也花了点时间</p>
+<p>T3最后暴力没写出来……</p>
+<p>题目还是多想想再动手……不然写完了才发现错了是真的惨。然后先预留好时间写难题的暴力，说不定出奇迹……</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/03/test0523/" data-id="ckazfu43q000grlgif6tzc4s3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/06/03/test0418/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          test0418
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/03/12609724/">12609724</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12687451/">12687451</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12757279/">12757279</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12682648/">12682648</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12687417/">12687417</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 zzt<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>12687417 | ZZT的小小博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数据结构总结[TOC] 堆功能可以用于维护整体的一个最值，插入删除均为O(logn)，求最值为O(1)。 实现用一个二叉树维护，父亲比儿子更满足条件，每次插入就加，然后再浮上来，删除就把最后一个树放过来然后再删除 运用用处比较广，可以优化DP，降低复杂度，在短时间内求出最值，一般可以直接使用priority_queue实现 并查集功能可以维护一个多个集合，查询两对象是否在同一集合，合并操作 实现通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12687417">
+<meta property="og:url" content="http://yoursite.com/2020/06/03/12687417/index.html">
+<meta property="og:site_name" content="ZZT的小小博客">
+<meta property="og:description" content="数据结构总结[TOC] 堆功能可以用于维护整体的一个最值，插入删除均为O(logn)，求最值为O(1)。 实现用一个二叉树维护，父亲比儿子更满足条件，每次插入就加，然后再浮上来，删除就把最后一个树放过来然后再删除 运用用处比较广，可以优化DP，降低复杂度，在短时间内求出最值，一般可以直接使用priority_queue实现 并查集功能可以维护一个多个集合，查询两对象是否在同一集合，合并操作 实现通">
+<meta property="article:published_time" content="2020-06-03T14:18:58.353Z">
+<meta property="article:modified_time" content="2020-06-03T14:18:03.237Z">
+<meta property="article:author" content="zzt">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="ZZT的小小博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZZT的小小博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">zztzztzzt</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-12687417" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/03/12687417/" class="article-date">
+  <time datetime="2020-06-03T14:18:58.353Z" itemprop="datePublished">2020-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      12687417
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据结构总结"><a href="#数据结构总结" class="headerlink" title="数据结构总结"></a>数据结构总结</h1><p>[TOC]</p>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>可以用于维护整体的一个最值，插入删除均为O(logn)，求最值为O(1)。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>用一个二叉树维护，父亲比儿子更满足条件，每次插入就加，然后再浮上来，删除就把最后一个树放过来然后再删除</p>
+<h3 id="运用"><a href="#运用" class="headerlink" title="运用"></a>运用</h3><p>用处比较广，可以优化DP，降低复杂度，在短时间内求出最值，一般可以直接使用priority_queue实现</p>
+<h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><h3 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h3><p>可以维护一个多个集合，查询两对象是否在同一集合，合并操作</p>
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p>通过记住父亲节点，一般先将父亲指向自己，查询时通过root判断是否在一个集合里</p>
+<h3 id="运用-1"><a href="#运用-1" class="headerlink" title="运用"></a>运用</h3><p>可以使用路径压缩以及按秩合并，可以从O(n)压到O(1)，一般都用于维护集合</p>
+<h2 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h2><h3 id="功能-2"><a href="#功能-2" class="headerlink" title="功能"></a>功能</h3><p>可以将一些比较大的数或一些数压缩到范围可控你的一个数，用这个数来判断和其他的关系</p>
+<h3 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h3><p>一般是用一定的函数实现，计算贡献为一个数，通过取模运算控制得到的数的范围，对于可能产生的冲突可以通过多层hash降低冲突概率。</p>
+<h3 id="运用-2"><a href="#运用-2" class="headerlink" title="运用"></a>运用</h3><p>字符串比较比较常用，与处理后O1比较字符串是否相同，以及可以在搜索中压缩状态。对于冲突，一般双hash的冲突概率就很小了，基本够用</p>
+<h2 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h2><h3 id="功能-3"><a href="#功能-3" class="headerlink" title="功能"></a>功能</h3><p>可以比较模式串在文本串中出现的位置的次数</p>
+<h3 id="实现-3"><a href="#实现-3" class="headerlink" title="实现"></a>实现</h3><p>使用失配函数，减少回的步数，优化匹配</p>
+<h3 id="运用-3"><a href="#运用-3" class="headerlink" title="运用"></a>运用</h3><p>用于字符串的匹配</p>
+<h2 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h2><h3 id="功能-4"><a href="#功能-4" class="headerlink" title="功能"></a>功能</h3><p>字典树可以在O(len)的时间加入和查询一个词是否在字典中，同时也可以用些骚操作维护其他的数字，经典有01trie</p>
+<h3 id="实现-4"><a href="#实现-4" class="headerlink" title="实现"></a>实现</h3><p>以字符串为例子，trie是一颗树，每个节点都存有一个字母，查询时每次通向下个字符所在边。</p>
+<h3 id="运用-4"><a href="#运用-4" class="headerlink" title="运用"></a>运用</h3><p>大多是判断一个字符串是否出现过为基础，同时也可以存数字，01trie是个很好的例子，可以用01来表示二进制里的数字，甚至可以做平衡树板子</p>
+<h2 id="AC自动机"><a href="#AC自动机" class="headerlink" title="AC自动机"></a>AC自动机</h2><h3 id="功能-5"><a href="#功能-5" class="headerlink" title="功能"></a>功能</h3><p>可以查询多个模式串在文本串中出现的次数。</p>
+<h3 id="实现-5"><a href="#实现-5" class="headerlink" title="实现"></a>实现</h3><p>可以说是吧KMP的思想放到Trie上，用fail指针在trie上跳动，来满足要求</p>
+<h3 id="运用-5"><a href="#运用-5" class="headerlink" title="运用"></a>运用</h3><p>一般就用于字符串的问题</p>
+<h2 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h2><h3 id="功能-6"><a href="#功能-6" class="headerlink" title="功能"></a>功能</h3><p>可以动态维护前缀和</p>
+<h3 id="实现-6"><a href="#实现-6" class="headerlink" title="实现"></a>实现</h3><p>通过一些需要依靠图片我没有的解释但技巧，使得空间在O(n)，复杂度在O(logn)的范围内实现</p>
+<h3 id="运用-6"><a href="#运用-6" class="headerlink" title="运用"></a>运用</h3><p>一般就是动态维护前缀和，单点修改，也可维护差分数组，来实现区间修改。</p>
+<h2 id="线段树"><a href="#线段树" class="headerlink" title="线段树"></a>线段树</h2><h3 id="功能-7"><a href="#功能-7" class="headerlink" title="功能"></a>功能</h3><p>包含所有树状数组的功能以及一些树状数组不能维护的东东。</p>
+<h3 id="实现-7"><a href="#实现-7" class="headerlink" title="实现"></a>实现</h3><p>叶子节点存下当前位置的值，每个父亲都存下儿子的答案。一般复杂度是O($\log  n$)的，常数较大，空间复杂度也大，代码长度也比较长。但是运用情况非常多，可以解决大部分情况。</p>
+<h3 id="运用-7"><a href="#运用-7" class="headerlink" title="运用"></a>运用</h3><p>基本都是在维护方式和push_down操作上出题，一般思维比较大。然后线段树可以和很多数据结构并用也是一些数据结构的基础。</p>
+<h2 id="ST表"><a href="#ST表" class="headerlink" title="ST表"></a>ST表</h2><h3 id="功能-8"><a href="#功能-8" class="headerlink" title="功能"></a>功能</h3><p>O($n \log n$)预处理查询区间最值。</p>
+<h3 id="实现-8"><a href="#实现-8" class="headerlink" title="实现"></a>实现</h3><p>这是倍增的产物，通过  $f_{i,j}$ 表示从 $i$开始长度为 $1\ll j$ 的部分的最值，查询的时候直接首位开始交叉形成查询空间。</p>
+<h3 id="运用-8"><a href="#运用-8" class="headerlink" title="运用"></a>运用</h3><p>可以以很短的代码长度以及很快的速度求出区间最值，也可用于末尾加数。</p>
+<h2 id="LCA"><a href="#LCA" class="headerlink" title="LCA"></a>LCA</h2><h3 id="功能-9"><a href="#功能-9" class="headerlink" title="功能"></a>功能</h3><p>查询最近公共祖先</p>
+<h3 id="实现-9"><a href="#实现-9" class="headerlink" title="实现"></a>实现</h3><p>可以用倍增来优化速度，使用倍增算法可以快速的找出最近公共祖先</p>
+<p>也可以通过树剖来实现，没写过只听说过。</p>
+<h3 id="运用-9"><a href="#运用-9" class="headerlink" title="运用"></a>运用</h3><p>运用的话基本就是辅助功能，查询最近公共祖先，可以在树上差分，树上前缀和。</p>
+<h2 id="平衡树"><a href="#平衡树" class="headerlink" title="平衡树"></a>平衡树</h2><h3 id="功能-10"><a href="#功能-10" class="headerlink" title="功能"></a>功能</h3><p>是二叉查找树的优化版，查找删除一个数，查询前驱后继，查询排名。由于二叉查找树可能退化到O(n)，所以要用平衡树保证深度大致在$\log n$的范围。</p>
+<h3 id="实现-10"><a href="#实现-10" class="headerlink" title="实现"></a>实现</h3><h4 id="treap"><a href="#treap" class="headerlink" title="treap"></a>treap</h4><p>是tree和heap的产物，对每个点随机一个值，在满足二叉查找树的同时维护随机值为一个堆，基本上随机的情况下只有 $\log n$ 的深度，满足情况。</p>
+<h4 id="Splay"><a href="#Splay" class="headerlink" title="Splay"></a>Splay</h4><p>通过对每次查询的值旋转到根节点来满足要求。</p>
+<h3 id="运用-10"><a href="#运用-10" class="headerlink" title="运用"></a>运用</h3><h2 id="树链剖分"><a href="#树链剖分" class="headerlink" title="树链剖分"></a>树链剖分</h2><h3 id="功能-11"><a href="#功能-11" class="headerlink" title="功能"></a>功能</h3><p>将一棵树剖分为很多条链，重新编号，满足链上编号的相同，可以用其他数据结构维护。</p>
+<h3 id="实现-11"><a href="#实现-11" class="headerlink" title="实现"></a>实现</h3><p>这里用的是重链剖分，将连接重儿子的链称为重边，将所有重边连成的链叫重链，这样就可以区间维护了。</p>
+<h3 id="运用-11"><a href="#运用-11" class="headerlink" title="运用"></a>运用</h3><p>一般是和线段树一起用，这样可以维护子树，最短路径上的情况。</p>
+<h2 id="LCT"><a href="#LCT" class="headerlink" title="LCT"></a>LCT</h2><h3 id="功能-12"><a href="#功能-12" class="headerlink" title="功能"></a>功能</h3><p>维护一个森林, 支持删除某条边，加⼊某条边，并保证加边，删边之后仍是森林。我们要维护这个森林的一些信息。</p>
+<h3 id="实现-12"><a href="#实现-12" class="headerlink" title="实现"></a>实现</h3><p>可以先用实链剖分，我们建很多个Splay 来维护每个链区间的信息。</p>
+<p>这里用上辅助树，辅助树是可以在满足辅助树、Splay 的性质下任意换根的。</p>
+<h3 id="运用-12"><a href="#运用-12" class="headerlink" title="运用"></a>运用</h3><p>可以类似于树链剖分，但这个是维护一个森林。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/03/12687417/" data-id="ckazfu4300002rlgi3px9g1l7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/06/03/12682648/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          12682648
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/06/03/12687430/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">12687430</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/03/12609724/">12609724</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12687451/">12687451</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12757279/">12757279</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12682648/">12682648</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/03/12687417/">12687417</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 zzt<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
