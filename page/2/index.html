@@ -52,7 +52,7 @@
     
   <div class="cover-frame">
     <div class="bg-box">
-      <img src="/images/cover1.jpg" alt="image frame" />
+      <img src="/images/cover6.jpg" alt="image frame" />
     </div>
     <div class="cover-inner text-center text-white">
       <h1><a href="/">ZZT的小小博客</a></h1>
@@ -113,94 +113,6 @@
     
 
     
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> vint vector<span class="meta-string">&lt;int&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">vint <span class="title">hread</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vint r;</span><br><span class="line">	<span class="built_in">string</span> s;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=s.size()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">		r.push_back(s[i]<span class="number">-48</span>);</span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">vint <span class="title">hplus</span><span class="params">(vint x,vint y)</span></span>&#123;</span><br><span class="line">	<span class="function">vint <span class="title">z</span><span class="params">(max((<span class="keyword">int</span>)x.size(),(<span class="keyword">int</span>)y.size())+<span class="number">1</span>)</span></span>;</span><br><span class="line">	z[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)z.size()<span class="number">-1</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;(<span class="keyword">int</span>)x.size())</span><br><span class="line">			z[i]+=x[i];</span><br><span class="line">		<span class="keyword">if</span>(i&lt;(<span class="keyword">int</span>)y.size())</span><br><span class="line">			z[i]+=y[i];</span><br><span class="line">		z[i+<span class="number">1</span>]=z[i]/<span class="number">10</span>;</span><br><span class="line">		z[i]%=<span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>((<span class="keyword">int</span>)z.size()&gt;<span class="number">1</span> &amp;&amp; !z.back())</span><br><span class="line">		z.pop_back();</span><br><span class="line">	<span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">vint <span class="title">hmult</span><span class="params">(vint x,vint y)</span></span>&#123;</span><br><span class="line">	<span class="function">vint <span class="title">z</span><span class="params">((<span class="keyword">int</span>)x.size()+(<span class="keyword">int</span>)y.size())</span></span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)z.size();i++)</span><br><span class="line">		z[i]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)x.size();i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> j=<span class="number">0</span>;j&lt;(<span class="keyword">int</span>)y.size();j++)</span><br><span class="line">			z[i+j]+=x[i]*y[j];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)z.size();i++)&#123;</span><br><span class="line">		z[i+<span class="number">1</span>]+=z[i]/<span class="number">10</span>;</span><br><span class="line">		z[i]%=<span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>((<span class="keyword">int</span>)z.size()&gt;<span class="number">1</span> &amp;&amp; !z.back())</span><br><span class="line">		z.pop_back();</span><br><span class="line">	<span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">vint <span class="title">hdiv</span><span class="params">(vint x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">	<span class="function">vint <span class="title">z</span><span class="params">((<span class="keyword">int</span>)x.size())</span></span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)z.size();i++)</span><br><span class="line">		z[i]=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> si=(<span class="keyword">int</span>)x.size();</span><br><span class="line">	x.push_back(<span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=si<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		x[i]+=(x[i+<span class="number">1</span>]%y)*<span class="number">10</span>;</span><br><span class="line">		z[i]=x[i]/y;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>((<span class="keyword">int</span>)z.size()&gt;<span class="number">1</span> &amp;&amp; !z.back())</span><br><span class="line">		z.pop_back();</span><br><span class="line">	<span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">vint <span class="title">hmax</span><span class="params">(vint x,vint y)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x.size()&gt;y.size())</span><br><span class="line">		<span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">if</span>(x.size()&lt;y.size())</span><br><span class="line">		<span class="keyword">return</span> y;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=(<span class="keyword">int</span>)x.size()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">		<span class="keyword">if</span>(x[i]&gt;y[i])</span><br><span class="line">			<span class="keyword">return</span> x;</span><br><span class="line">		<span class="keyword">if</span>(x[i]&lt;y[i])</span><br><span class="line">			<span class="keyword">return</span> y;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">vint <span class="title">hchange</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	vint r;</span><br><span class="line">	<span class="keyword">while</span>(x)&#123;</span><br><span class="line">		r.push_back(x%<span class="number">10</span>);</span><br><span class="line">		x/=<span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">vint <span class="title">hminus</span><span class="params">(vint x,vint y)</span></span>&#123;</span><br><span class="line">	<span class="function">vint <span class="title">z</span><span class="params">(max((<span class="keyword">int</span>)x.size(),(<span class="keyword">int</span>)y.size())+<span class="number">1</span>)</span></span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)z.size()<span class="number">-1</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i&lt;(<span class="keyword">int</span>)x.size())</span><br><span class="line">			z[i]+=x[i];</span><br><span class="line">		<span class="keyword">if</span>(i&lt;(<span class="keyword">int</span>)y.size())</span><br><span class="line">			z[i]-=y[i];</span><br><span class="line">		<span class="keyword">if</span>(z[i]&lt;<span class="number">0</span>)&#123;</span><br><span class="line">			z[i]+=<span class="number">10</span>;</span><br><span class="line">			z[i+<span class="number">1</span>]--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>((<span class="keyword">int</span>)z.size()&gt;<span class="number">1</span> &amp;&amp; !z.back())</span><br><span class="line">		z.pop_back();</span><br><span class="line">	<span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hwrite</span><span class="params">(vint x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x.back()==<span class="number">-1</span>)&#123;</span><br><span class="line">		<span class="built_in">putchar</span>(<span class="string">'-'</span>);</span><br><span class="line">		x.pop_back();</span><br><span class="line">		vint a,b;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)x.size();i++)</span><br><span class="line">			a.push_back(x[i]);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">0</span>;i&lt;(<span class="keyword">int</span>)x.size();i++)</span><br><span class="line">			b.push_back(<span class="number">0</span>);</span><br><span class="line">		b.push_back(<span class="number">1</span>);</span><br><span class="line">		x=hminus(b,a);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">register</span> <span class="keyword">int</span> i=x.size()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">		<span class="built_in">putchar</span>(x[i]+<span class="number">48</span>);</span><br><span class="line">	<span class="built_in">putchar</span>(<span class="string">'\n'</span>);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	vint x,y;</span><br><span class="line">	x=hread();</span><br><span class="line">	y=hread();</span><br><span class="line">	vint z=hminus(x,y);</span><br><span class="line">	hwrite(z);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-intro" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/03/intro/"
-    >intro</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/06/03/intro/" class="article-date">
-  <time datetime="2020-06-03T14:18:58.353Z" itemprop="datePublished">2020-06-03</time>
-</a>
-      
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="菜鸡的zzt的自我介绍"><a href="#菜鸡的zzt的自我介绍" class="headerlink" title="菜鸡的zzt的自我介绍"></a>菜鸡的zzt的自我介绍</h1><h2 id="OI生涯总述"><a href="#OI生涯总述" class="headerlink" title="OI生涯总述"></a>OI生涯总述</h2><p>我嘞，就一个菜鸡，$ 2016.05.08 $小六在签约中雅后在cnyali上了第一次oi课以及加入luogu。</p>
-<p>划水三年由于太菜，NOIP2018差提高一5分，中考又炸了个语文，没能继续在yali。在2019.7.3被 FHS of Changsha，Hunan 屑了加入一中，成为组内最菜的划水者。</p>
-<p>然后现在由于过于菜，即将AFO。</p>
-<h2 id="一些小特点"><a href="#一些小特点" class="headerlink" title="一些小特点"></a>一些小特点</h2><p>相对于那些巨巨们，我拿到电脑喜欢瞎折腾，硬件到软件基本都懂一点点。</p>
-<p><del>本次高一机房系统Win7+Ubuntu19.10双系统我搞的然后同传……</del></p>
-<p>游戏有些接触，但都菜，相对于其他OIer的MC，.io 游戏，我比较喜欢些一般男生都喜欢的游戏。</p>
-<p>喜欢吃鸡，比较喜欢刺激点的团战模式以及8分钟，不喜欢跑图25分钟，战斗1秒（我一把大概也能战斗个两三次吧）的感觉。但是菜，手机也菜，只会三指操作，所以经常按错键导致操作失误没能及时开枪……</p>
-<p>王者也可，幼儿园也玩！还有王牌战士玩过一段时间。MC最近也有捡起，因为一位巨巨在玩，同时嗯……也玩。</p>
-<p>不喜欢ACG，我只喜欢生活中的小姐姐！！！</p>
-<p>平常运动的话基本懂一些，球类都会，不是很会，但无论大球小球都了解一些。跑步只会 200 , 100 速度不够，400 耐力不够。（话说为什么运动会只公布前六？我貌似是第七还是第八来着……菜死了。）</p>
-<p>对鞋有小小了解……篮球鞋想买但是每次都有跑鞋吸引我然后买跑鞋去了</p>
-<p>但由于穷，能穿出去的貌似只有 Free Rn Flyknit ，Pegasus 36 ，NMD R1 ，Airmax 97 Throwback Future。</p>
-<p>以及一些比较便宜的不懂鞋（现在也不懂）的时候买的一些普通跑鞋……</p>
-<p>语文巨差！英语也差！其他科目到了新班级后也要被吊着打……我就是个菜鸡……</p>
-
-      
-      <!-- reward -->
-      
-    </div>
     
     
       <!-- copyright -->
@@ -254,35 +166,6 @@
     
 
     
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>#这是些日记</p>
-<p>[TOC]</p>
-<h2 id="2020-05-23"><a href="#2020-05-23" class="headerlink" title="2020-05-23"></a>2020-05-23</h2><p><a href="https://www.cnblogs.com/ztz-cpp/p/test0523.html" target="_blank" rel="noopener">考试</a></p>
-<h2 id="2020-05-03"><a href="#2020-05-03" class="headerlink" title="2020-05-03"></a>2020-05-03</h2><p><a href="https://www.cnblogs.com/ztz-cpp/p/12823178.html" target="_blank" rel="noopener">考试</a></p>
-<h2 id="2020-05-02"><a href="#2020-05-02" class="headerlink" title="2020-05-02"></a>2020-05-02</h2><p><a href="https://www.cnblogs.com/ztz-cpp/p/12818672.html" target="_blank" rel="noopener">考试</a></p>
-<h2 id="2020-04-25"><a href="#2020-04-25" class="headerlink" title="2020-04-25"></a>2020-04-25</h2><p><a href="https://www.cnblogs.com/ztz-cpp/p/12773192.html" target="_blank" rel="noopener">考试</a></p>
-<h2 id="2020-04-22"><a href="#2020-04-22" class="headerlink" title="2020-04-22"></a>2020-04-22</h2><p>愉快的调试次小生成树……</p>
-<h2 id="2020-04-18"><a href="#2020-04-18" class="headerlink" title="2020-04-18"></a>2020-04-18</h2><p><a href="https://www.cnblogs.com/ztz-cpp/p/test0418.html" target="_blank" rel="noopener">这个</a></p>
-<h2 id="2020-04-12"><a href="#2020-04-12" class="headerlink" title="2020-04-12"></a>2020-04-12</h2><p>今天更新下吧，前段时间真的不知道该写些什么……</p>
-<p><a href="https://www.cnblogs.com/ztz-cpp/p/plan_for_hnoi2020.html" target="_blank" rel="noopener">大概水个计划？</a></p>
-<h2 id="2020-03-29"><a href="#2020-03-29" class="headerlink" title="2020-03-29"></a>2020-03-29</h2><p>今天大概又是沉迷数学无法自拔吧，尽量补充了点题，最后一分钟过了时间才改对一题，但是不能交了……</p>
-<h2 id="2020-03-28"><a href="#2020-03-28" class="headerlink" title="2020-03-28"></a>2020-03-28</h2><p>今天大概是补充了下以前没学好的知识吧，矩阵乘法搞了几道，原来的作业在有题解的情况下还是写的可以</p>
-<p>明天争取把剩下的题能写多少写多少吧</p>
-<p>今天换了个学习环境，从客厅搬进自己房间了，设备也换了，感觉不错，两个屏幕还是舒服/cy一直闲置的笔记本排上用场了，再怎么说低压i5 4核心8线程比外面那台奔腾2核心2线程的好多了好多了/xyx</p>
-<h2 id="2020-03-27"><a href="#2020-03-27" class="headerlink" title="2020-03-27"></a>2020-03-27</h2><p>今天又是继续做哪些数学题……不过貌似我知道了插排怎么计算？？？貌似是个简单的知识学了下懂了</p>
-<p>总体来说还行吧，但是家里有点事，耽误了点时间，没搞太多……</p>
-<h2 id="2020-03-26"><a href="#2020-03-26" class="headerlink" title="2020-03-26"></a>2020-03-26</h2><p>第一次处理cnblog，基本都是拿着别人开源的一通复制粘贴，改了点自己看得懂的……我还是太菜了</p>
-<p>今天呢，大概又是复习了下算法进阶指南的数学知识……没写题</p>
-<p>大概复习了质数约数同余等等吧</p>
-
-      
-      <!-- reward -->
-      
-    </div>
     
     
       <!-- copyright -->
@@ -305,7 +188,7 @@
 
 </article>
     
-    <article id="post-test0418" class="article article-type-post" itemscope
+    <article id="post-intro" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -313,8 +196,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/06/03/test0418/"
-    >test0418</a> 
+  <a class="article-title" href="/2020/06/03/intro/"
+    >intro</a> 
 </h2>
  
 
@@ -323,8 +206,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/06/03/test0418/" class="article-date">
-  <time datetime="2020-06-03T14:18:58.341Z" itemprop="datePublished">2020-06-03</time>
+      <a href="/2020/06/03/intro/" class="article-date">
+  <time datetime="2020-06-03T14:18:58.353Z" itemprop="datePublished">2020-06-03</time>
 </a>
       
       
@@ -336,37 +219,6 @@
     
 
     
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="test-0418"><a href="#test-0418" class="headerlink" title="test 0418"></a>test 0418</h1><p>照样啥都不会</p>
-<h2 id="T1-tree"><a href="#T1-tree" class="headerlink" title="T1 tree"></a>T1 tree</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>原题是给定一棵 $n$ 个点的树($n \le 50000$)，求出树上距离前 $m$ 大的路径长度($m \le 300000$)。</p>
-<h3 id="开始想法"><a href="#开始想法" class="headerlink" title="开始想法"></a>开始想法</h3><p>写了个倍增lca的暴力，不过貌似有些地方炸掉了最后只有20分……</p>
-<h3 id="正解"><a href="#正解" class="headerlink" title="正解"></a>正解</h3><p>考虑超级钢琴的做法，点分治时依次扫每棵子树，若将当前子树内的点作为路径的一个端点，另一个端点可以落在一个点分治序列的区间内（之前扫过的子树），这样得出一个长度为 nlogn 的点分治序列，加上每个点所对应的区间，然后就完全转为超级钢琴的问题了</p>
-<h2 id="T2-mincost"><a href="#T2-mincost" class="headerlink" title="T2 mincost"></a>T2 mincost</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>给定 n 个点（编号为 1-n），由 m 条无向边连接的图，每个点有两个权值 ax，bx，给定一个值 k，要求在图中选出大小为 k 的点集 S，使 S 中任意两点间存在仅经过在 S 中的点的路径。设 As 为点集 S 中 ax 的最大值，Bs 为 S 中 bx 的最大值，求一个合法的 S 使得 As+Bs 最小。</p>
-<h3 id="开始想法-1"><a href="#开始想法-1" class="headerlink" title="开始想法"></a>开始想法</h3><p>题目都没怎么看懂……直接</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">puts</span>(<span class="string">"no lolution"</span>);</span><br></pre></td></tr></table></figure>
-<p>走人……</p>
-<h3 id="正解-1"><a href="#正解-1" class="headerlink" title="正解"></a>正解</h3><p>特判 k=1 后，设每条边的权值为两个顶点权值的最大值，化点权为边权。</p>
-<p>考虑从小到大枚举 As，维护最小的 Bs 的值。</p>
-<p>注意到 Bs 单调递减，所以我们每次加入一条边时，看看 Bs 是否能减少，也就是问删掉当前权值最大的边后图的最大连通块是否大于等于 k。</p>
-<p>用 LCT 维护按权值 b 的最小生成树，每次加入的边没被删就维护最小生成树，删边的时候如果这条边还在生成树上就判断两个连通块的大小并决定是否删除，另外维护一个量记录当前大于 k 的连通块个数，注意 lct 要维护子树大小。</p>
-<h2 id="T3-crisis"><a href="#T3-crisis" class="headerlink" title="T3 crisis"></a>T3 crisis</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>图是一棵树，安全区只包括在标号 $l$ 到 $r$ 的城市，小奇现在在城市 $x$，它想知道最近的安全城市的距离。</p>
-<p>$n,q \le 100000$</p>
-<p>其中有特殊点菊花图和链</p>
-<h3 id="开始想法-2"><a href="#开始想法-2" class="headerlink" title="开始想法"></a>开始想法</h3><p>搏一搏，单车变摩托</p>
-<p>直接最段路（其实想错了只有一条路直接搜索即可，我这反而凭空多一个 $\log$ ）来一波，没想到竟然搞过去了</p>
-<p>菊花图的数据搞错了……只有80</p>
-<h3 id="正解-2"><a href="#正解-2" class="headerlink" title="正解"></a>正解</h3><p>每一个线段树结点维护一棵区间内的标号的点形成的虚树，对于每次询问，拆分成 $\log(n)$段区间，然后分别询问。</p>
-<p>将询问离线处理，不妨将询问点都插入区间虚树中，然后对每个线段树的结点一次树形dp 来计算答案。</p>
-<p>线段树结点中虚树总点数为$(n+q)\log n$，加上构建虚树的复杂度，总复杂度$(n+q)\log^2n$</p>
-
-      
-      <!-- reward -->
-      
-    </div>
     
     
       <!-- copyright -->
@@ -420,207 +272,59 @@
     
 
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
       
       
 
-      
-      <h1 id="ZZT的Hnoi计划"><a href="#ZZT的Hnoi计划" class="headerlink" title="ZZT的Hnoi计划"></a>ZZT的Hnoi计划</h1><p>[toc]</p>
-<p>大概？我也不知道大概……努力水水吧，看能不能水到……</p>
-<p>目前省选都越来越难，根据我三次没有爆零的体验，HN省选题基本让人看不懂……（可能当时连个省一都没有还在想省选？！？），现在回过头来发现18年有一道会的然而还是最简单的……</p>
-<p>省选可能部分分还是比较好拿</p>
-<h2 id="对省选的感受"><a href="#对省选的感受" class="headerlink" title="对省选的感受"></a>对省选的感受</h2><h3 id="随便糊糊的感受"><a href="#随便糊糊的感受" class="headerlink" title="随便糊糊的感受"></a>随便糊糊的感受</h3><p>省选吗，就是神选，神仙打架凡人退下。</p>
-<p>当了三年水签到的我也要开始正视省选了……今年一中奖励名额，当初来也就是为了水到这个的……</p>
-<p>可能当时也too young了吧……这里神仙也是云集想轻松水到也是比较难得，寒假也不知道干什么去了，知识点学是学了学了没过多久就忘了……</p>
-<p>可能需要多打点代码，虽然做的题都是什么省选，noi难度的题，但是大多是看完思路后做的，所有说去掉这一部分思路，写个代码可能真的浪费了这个难度，其实自己达到的水平可能也只能到提高……</p>
-<p>而且貌似自己最近写代码能力急剧下降……一道线段树调两天……再来一道线段树再调一天，调试的效率比较低，而且像题目都是想出来没有仔细验证就写的，没有仔细考虑所有情况，基本些什么就出什么bug……</p>
-<h3 id="该怎么搞"><a href="#该怎么搞" class="headerlink" title="该怎么搞"></a>该怎么搞</h3><h3 id="这段时间"><a href="#这段时间" class="headerlink" title="这段时间"></a>这段时间</h3><p>省选考的主要是思维上的问题，以后做题还是多从思维上出发，考虑题目怎么做好，而不是一味地只学个板子不会运用。</p>
-<p>有些没学的算法和知识点要及时补充。</p>
-<p>历年原题也可以多做做</p>
-<p>可以多见识见识新的题目，扩宽自己的眼界，达到提升自我的目的。</p>
-<h3 id="考场上"><a href="#考场上" class="headerlink" title="考场上"></a>考场上</h3><p>这段时间考试也要按照考场的方式做题</p>
-<p>还有一个问题是省选比联赛更难，想正解想不出要及时去想怎么部分分，怎样拿更高的部分分，这才事考场拿到高分的方法，真正到考试时想办法A掉最简单的一道或者两道题，其他题想办法拿到更高的部分分，想不出暴力也要打，这样才有办法提高自己的分数。</p>
-<p>以及策略上可以选择更优，考试时间貌似比联赛要长，可以花更多时间审题和想思路上，不要想着一味地打上一些看似会但是又很玄学的数据结构，得不偿失。</p>
-<p><strong>偏分过样例，暴力出奇迹，打表进省一。</strong></p>
-<p>这句经典还是适用的，要想办法拿分数。</p>
-<h2 id="附上知识点"><a href="#附上知识点" class="headerlink" title="附上知识点"></a>附上知识点</h2><p>这些知识点应该都要会……我也不知道可能发生什么……</p>
-<h3 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h3><ul>
-<li><p>网络流</p>
-</li>
-<li><p>最短路</p>
-</li>
-<li><p>生成树</p>
-</li>
-<li><p>tarjan:scc,桥，割</p>
-</li>
-<li><p>点分治、边分治</p>
-</li>
-<li><p>树链剖分</p>
-</li>
-<li><p>虚树</p>
-</li>
-<li><p>仙人掌</p>
-</li>
-<li><p>圆方树</p>
-</li>
-<li><p>2-SAT</p>
-</li>
-<li><p>差分约束</p>
-</li>
-</ul>
-<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><ul>
-<li><p>Sp- ay</p>
-</li>
-<li><p>堆、栈、队列</p>
-</li>
-<li><p>树状数组</p>
-</li>
-<li><p>Trie</p>
-</li>
-<li><p>分块</p>
-</li>
-<li><p>线段树</p>
-</li>
-<li><p>Treap</p>
-</li>
-<li><p>K-D tree</p>
-</li>
-<li><p>树套树</p>
-</li>
-<li><p>并查集</p>
-</li>
-<li><p>主席树</p>
-</li>
-<li><p>可持久化数据结构</p>
-</li>
-<li><p>莫队</p>
-</li>
-<li><p>CDQ分治</p>
-</li>
-<li><p>整体二分</p>
-</li>
-<li><p>左偏树</p>
-</li>
-<li><p>ST表</p>
-</li>
-</ul>
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ul>
-<li><p>hash</p>
-</li>
-<li><p>trie</p>
-</li>
-<li><p>kmp</p>
-</li>
-<li><p>AC Automation</p>
-</li>
-<li><p>Suffix Array</p>
-</li>
-<li><p>Suffix Automation</p>
-</li>
-<li><p>manacher</p>
-</li>
-<li><p>回文自动机</p>
-</li>
-<li><p>后缀树</p>
-</li>
-</ul>
-<h3 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h3><ul>
-<li><p>线性筛</p>
-</li>
-<li><p>容斥</p>
-</li>
-<li><p>莫比乌斯反演</p>
-</li>
-<li><p>(ex)gcd</p>
-</li>
-<li><p>三分</p>
-</li>
-<li><p>费马小定理</p>
-</li>
-<li><p>lucas定理</p>
-</li>
-<li><p>组合数</p>
-</li>
-<li><p>BSGS</p>
-</li>
-<li><p>中国剩余定理</p>
-</li>
-<li><p>矩阵</p>
-</li>
-<li><p>FFT&amp;NTT</p>
-</li>
-<li><p>Simpson积分</p>
-</li>
-<li><p>BurnSide引理</p>
-</li>
-<li><p>Polya定理</p>
-</li>
-<li><p>生成函数</p>
-</li>
-<li><p>主定理</p>
-</li>
-<li><p>Miller-Rabin</p>
-</li>
-</ul>
-<h3 id="计算几何"><a href="#计算几何" class="headerlink" title="计算几何"></a>计算几何</h3><ul>
-<li><p>向量</p>
-</li>
-<li><p>多边形面积</p>
-</li>
-<li><p>凸包</p>
-</li>
-<li><p>半平面交</p>
-</li>
-<li><p>平面图</p>
-</li>
-<li><p>旋转卡壳</p>
-</li>
-<li><p>三角剖分</p>
-</li>
-</ul>
-<h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><ul>
-<li><p>序列、区间</p>
-</li>
-<li><p>树形、数位</p>
-</li>
-<li><p>概率、期望</p>
-</li>
-<li><p>插头、状压</p>
-</li>
-<li><p>斜率优化</p>
-</li>
-<li><p>四边形不等式</p>
-</li>
-</ul>
-<h3 id="搜索暴力"><a href="#搜索暴力" class="headerlink" title="搜索暴力"></a>搜索暴力</h3><ul>
-<li><p>记忆化</p>
-</li>
-<li><p>A*</p>
-</li>
-<li><p>迭代加深</p>
-</li>
-<li><p>双向广搜</p>
-</li>
-<li><p>爬山</p>
-</li>
-<li><p>模拟退火</p>
-</li>
-</ul>
-<h3 id="玄学算法"><a href="#玄学算法" class="headerlink" title="玄学算法"></a>玄学算法</h3><ul>
-<li><p>构造</p>
-</li>
-<li><p>打表</p>
-</li>
-<li><p>博弈</p>
-</li>
-<li><p>STL</p>
-</li>
-</ul>
+    </footer>
 
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
+    <article id="post-test0418" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/03/test0418/"
+    >test0418</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/06/03/test0418/" class="article-date">
+  <time datetime="2020-06-03T14:18:58.341Z" itemprop="datePublished">2020-06-03</time>
+</a>
       
-      <!-- reward -->
+      
+      
       
     </div>
+    
+
+    
+
+    
     
     
       <!-- copyright -->
@@ -674,38 +378,6 @@
     
 
     
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="test-0523"><a href="#test-0523" class="headerlink" title="test 0523"></a>test 0523</h1><p>[TOC]</p>
-<h2 id="T1-树上三角形"><a href="#T1-树上三角形" class="headerlink" title="T1 树上三角形"></a>T1 树上三角形</h2><h3 id="得分情况"><a href="#得分情况" class="headerlink" title="得分情况"></a>得分情况</h3><p>期望：70-100</p>
-<p>实际：10</p>
-<p>改后：</p>
-<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给定一个大小为 $n$ 的有点权树，每次询问一对点$(u,v)$，问是否能在 $u$ 到 $v$ 的简单路径上取三个点权，以这三个权值为边长构成一个三角形。同时还需支持单点修改。</p>
-<h3 id="犯傻原因"><a href="#犯傻原因" class="headerlink" title="犯傻原因"></a>犯傻原因</h3><p>莫名其妙的树链剖分中线段数写挂了，然后没考虑到限制上传数量的优化……</p>
-<h3 id="正解"><a href="#正解" class="headerlink" title="正解"></a>正解</h3><p>考虑到直接暴力，先求出LCA，然后发现路径长度为 $k$ ，我们知道，如果要满足<br>$$<br>a_i&gt;a_{i-1}+a_{i-2}<br>$$<br>极端请情况为斐波那契，那么所有数字在int范围内，所以最多50个数。</p>
-<p>若两点直接路径长度大于50,那么可以直接判断为可行。</p>
-<p>否则直接暴力，最后复杂度$O(q)$</p>
-<h2 id="T2-树上游戏"><a href="#T2-树上游戏" class="headerlink" title="T2 树上游戏"></a>T2 树上游戏</h2><h3 id="得分情况-1"><a href="#得分情况-1" class="headerlink" title="得分情况"></a>得分情况</h3><p>期望：100</p>
-<p>实际：100</p>
-<h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>Bob 发明了一种与树有关的游戏： 他从树中删除任意数量的边，计算删除后所有连通块大小的乘积， Bob 将得到这么多的分数。你的任务就是对于一颗给定的树，求出 Bob 能得到的 最大分数。</p>
-<h3 id="正解-1"><a href="#正解-1" class="headerlink" title="正解"></a>正解</h3><p>考虑树形DP</p>
-<p>设 $f_{x,j}$ 为点 $x$ 分为 $j$ 个联通块时的答案，那么就有<br>$$<br>f_{x,j}=\frac{f_{x,k}}{k} \times \frac{f_{y,j-k}}{j-k} \times j (y\in x’s\ son)<br>$$<br>然后宁高精就水过了，不过有个玄学优化，为了避免再写个高精除，可以设<br>$$<br>g_{x,j}=\frac{f_{x,j}}{j}<br>$$<br>那么就显然了</p>
-<h2 id="T3-树上路径"><a href="#T3-树上路径" class="headerlink" title="T3 树上路径"></a>T3 树上路径</h2><h3 id="得分情况-2"><a href="#得分情况-2" class="headerlink" title="得分情况"></a>得分情况</h3><p>期望：0</p>
-<p>实际：0</p>
-<h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>古时候帝国有 $n$ 个城堡，编号从 $1$ 到 $n$。除了皇帝拥有的城堡之外，其他每 个城堡都从属于某个城堡。如果两个城堡有直接从属关系，则有一条双向路径连 接两个城堡，保证整个帝国的所有城堡互相可达。 每一年，野蛮人有可能对某一个城堡 $c$ 发起攻击，所到之处，寸草不生。此 外，野蛮人不会对同一个城堡发起多次攻击。 如果某一年野蛮人没有攻击，则骑士就会出来巡逻，巡逻路线是从城堡 $a$ 到 城堡 $b$ 且不会多次经过同一个城堡。在巡逻时，骑士需要休息，但是他不会选择 y 年后被攻击的城堡休息。具体地说，城堡 $a$ 到城堡 $b$（不含 $a$ 和 $b$）的路线 中，第 k 个在 y+1 年后没被攻击的城堡会被骑士选做休息地点。 你的任务就是计算每次骑士巡逻的休息地点。</p>
-<h3 id="犯傻原因-1"><a href="#犯傻原因-1" class="headerlink" title="犯傻原因"></a>犯傻原因</h3><p>暴力最后没写出来（不过据说这个暴力在这个水数据下可以A？）</p>
-<h3 id="正解-2"><a href="#正解-2" class="headerlink" title="正解"></a>正解</h3><h2 id="考试总结"><a href="#考试总结" class="headerlink" title="考试总结"></a>考试总结</h2><p>T1没有仔细想就开始写了，没能想到更简便的方法，写树链剖分浪费了许多时间还写错了……</p>
-<p>T2还好过了但调试也花了点时间</p>
-<p>T3最后暴力没写出来……</p>
-<p>题目还是多想想再动手……不然写完了才发现错了是真的惨。然后先预留好时间写难题的暴力，说不定出奇迹……</p>
-
-      
-      <!-- reward -->
-      
-    </div>
     
     
       <!-- copyright -->
@@ -823,14 +495,6 @@
     </li>
     
     <li class="nav-item">
-      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
-    </li>
-    
-    <li class="nav-item">
       <a class="nav-item-link" href="/2019/about">关于我</a>
     </li>
     
@@ -873,16 +537,6 @@
   <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
   <div class="reward-box">
     
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
-      <span class="reward-type">支付宝</span>
-    </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
     
   </div>
 </div>
@@ -899,7 +553,7 @@
     var typed = new Typed("#subtitle", {
       strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
       startDelay: 0,
-      typeSpeed: 200,
+      typeSpeed: 300,
       loop: true,
       backSpeed: 100,
       showCursor: true
@@ -1042,6 +696,10 @@
 
 <!-- ClickBoom2 -->
 
+
+<script src="/js/clickBoom2.js"></script>
+
+
 <!-- CodeCopy -->
 
 
@@ -1113,6 +771,9 @@
     
     
     
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
       
   </div>
 </body>
