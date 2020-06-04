@@ -96,7 +96,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/04/%E9%AB%98%E7%B2%BE%E5%BA%A6/" data-id="ckb0bxo3m000crqgi487i3hvu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/04/%E9%AB%98%E7%B2%BE%E5%BA%A6/" data-id="ckb0c2c7p000f5ygi0sc2587l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/03/intro/" data-id="ckb0bxo330003rqgi8cesgqj3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/03/intro/" data-id="ckb0c2c7700035ygi8nlkbv8g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +201,64 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/03/diory/" data-id="ckb0bxo320002rqgihindeas1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/03/diory/" data-id="ckb0c2c7500025ygihmime4dj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test0418" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/06/03/test0418/" class="article-date">
+  <time datetime="2020-06-03T14:18:58.341Z" itemprop="datePublished">2020-06-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/03/test0418/">test0418</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="test-0418"><a href="#test-0418" class="headerlink" title="test 0418"></a>test 0418</h1><p>照样啥都不会</p>
+<h2 id="T1-tree"><a href="#T1-tree" class="headerlink" title="T1 tree"></a>T1 tree</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>原题是给定一棵 $n$ 个点的树($n \le 50000$)，求出树上距离前 $m$ 大的路径长度($m \le 300000$)。</p>
+<h3 id="开始想法"><a href="#开始想法" class="headerlink" title="开始想法"></a>开始想法</h3><p>写了个倍增lca的暴力，不过貌似有些地方炸掉了最后只有20分……</p>
+<h3 id="正解"><a href="#正解" class="headerlink" title="正解"></a>正解</h3><p>考虑超级钢琴的做法，点分治时依次扫每棵子树，若将当前子树内的点作为路径的一个端点，另一个端点可以落在一个点分治序列的区间内（之前扫过的子树），这样得出一个长度为 nlogn 的点分治序列，加上每个点所对应的区间，然后就完全转为超级钢琴的问题了</p>
+<h2 id="T2-mincost"><a href="#T2-mincost" class="headerlink" title="T2 mincost"></a>T2 mincost</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>给定 n 个点（编号为 1-n），由 m 条无向边连接的图，每个点有两个权值 ax，bx，给定一个值 k，要求在图中选出大小为 k 的点集 S，使 S 中任意两点间存在仅经过在 S 中的点的路径。设 As 为点集 S 中 ax 的最大值，Bs 为 S 中 bx 的最大值，求一个合法的 S 使得 As+Bs 最小。</p>
+<h3 id="开始想法-1"><a href="#开始想法-1" class="headerlink" title="开始想法"></a>开始想法</h3><p>题目都没怎么看懂……直接</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">puts</span>(<span class="string">"no lolution"</span>);</span><br></pre></td></tr></table></figure>
+<p>走人……</p>
+<h3 id="正解-1"><a href="#正解-1" class="headerlink" title="正解"></a>正解</h3><p>特判 k=1 后，设每条边的权值为两个顶点权值的最大值，化点权为边权。</p>
+<p>考虑从小到大枚举 As，维护最小的 Bs 的值。</p>
+<p>注意到 Bs 单调递减，所以我们每次加入一条边时，看看 Bs 是否能减少，也就是问删掉当前权值最大的边后图的最大连通块是否大于等于 k。</p>
+<p>用 LCT 维护按权值 b 的最小生成树，每次加入的边没被删就维护最小生成树，删边的时候如果这条边还在生成树上就判断两个连通块的大小并决定是否删除，另外维护一个量记录当前大于 k 的连通块个数，注意 lct 要维护子树大小。</p>
+<h2 id="T3-crisis"><a href="#T3-crisis" class="headerlink" title="T3 crisis"></a>T3 crisis</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>图是一棵树，安全区只包括在标号 $l$ 到 $r$ 的城市，小奇现在在城市 $x$，它想知道最近的安全城市的距离。</p>
+<p>$n,q \le 100000$</p>
+<p>其中有特殊点菊花图和链</p>
+<h3 id="开始想法-2"><a href="#开始想法-2" class="headerlink" title="开始想法"></a>开始想法</h3><p>搏一搏，单车变摩托</p>
+<p>直接最段路（其实想错了只有一条路直接搜索即可，我这反而凭空多一个 $\log$ ）来一波，没想到竟然搞过去了</p>
+<p>菊花图的数据搞错了……只有80</p>
+<h3 id="正解-2"><a href="#正解-2" class="headerlink" title="正解"></a>正解</h3><p>每一个线段树结点维护一棵区间内的标号的点形成的虚树，对于每次询问，拆分成 $\log(n)$段区间，然后分别询问。</p>
+<p>将询问离线处理，不妨将询问点都插入区间虚树中，然后对每个线段树的结点一次树形dp 来计算答案。</p>
+<p>线段树结点中虚树总点数为$(n+q)\log n$，加上构建虚树的复杂度，总复杂度$(n+q)\log^2n$</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/06/03/test0418/" data-id="ckb0c2c7c00075ygi22d51mcl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -428,64 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/03/plan_for_hnoi2020/" data-id="ckb0bxo2z0001rqgi4uibbgyv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-test0418" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/03/test0418/" class="article-date">
-  <time datetime="2020-06-03T14:18:58.341Z" itemprop="datePublished">2020-06-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/03/test0418/">test0418</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="test-0418"><a href="#test-0418" class="headerlink" title="test 0418"></a>test 0418</h1><p>照样啥都不会</p>
-<h2 id="T1-tree"><a href="#T1-tree" class="headerlink" title="T1 tree"></a>T1 tree</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>原题是给定一棵 $n$ 个点的树($n \le 50000$)，求出树上距离前 $m$ 大的路径长度($m \le 300000$)。</p>
-<h3 id="开始想法"><a href="#开始想法" class="headerlink" title="开始想法"></a>开始想法</h3><p>写了个倍增lca的暴力，不过貌似有些地方炸掉了最后只有20分……</p>
-<h3 id="正解"><a href="#正解" class="headerlink" title="正解"></a>正解</h3><p>考虑超级钢琴的做法，点分治时依次扫每棵子树，若将当前子树内的点作为路径的一个端点，另一个端点可以落在一个点分治序列的区间内（之前扫过的子树），这样得出一个长度为 nlogn 的点分治序列，加上每个点所对应的区间，然后就完全转为超级钢琴的问题了</p>
-<h2 id="T2-mincost"><a href="#T2-mincost" class="headerlink" title="T2 mincost"></a>T2 mincost</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>给定 n 个点（编号为 1-n），由 m 条无向边连接的图，每个点有两个权值 ax，bx，给定一个值 k，要求在图中选出大小为 k 的点集 S，使 S 中任意两点间存在仅经过在 S 中的点的路径。设 As 为点集 S 中 ax 的最大值，Bs 为 S 中 bx 的最大值，求一个合法的 S 使得 As+Bs 最小。</p>
-<h3 id="开始想法-1"><a href="#开始想法-1" class="headerlink" title="开始想法"></a>开始想法</h3><p>题目都没怎么看懂……直接</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">puts</span>(<span class="string">"no lolution"</span>);</span><br></pre></td></tr></table></figure>
-<p>走人……</p>
-<h3 id="正解-1"><a href="#正解-1" class="headerlink" title="正解"></a>正解</h3><p>特判 k=1 后，设每条边的权值为两个顶点权值的最大值，化点权为边权。</p>
-<p>考虑从小到大枚举 As，维护最小的 Bs 的值。</p>
-<p>注意到 Bs 单调递减，所以我们每次加入一条边时，看看 Bs 是否能减少，也就是问删掉当前权值最大的边后图的最大连通块是否大于等于 k。</p>
-<p>用 LCT 维护按权值 b 的最小生成树，每次加入的边没被删就维护最小生成树，删边的时候如果这条边还在生成树上就判断两个连通块的大小并决定是否删除，另外维护一个量记录当前大于 k 的连通块个数，注意 lct 要维护子树大小。</p>
-<h2 id="T3-crisis"><a href="#T3-crisis" class="headerlink" title="T3 crisis"></a>T3 crisis</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>图是一棵树，安全区只包括在标号 $l$ 到 $r$ 的城市，小奇现在在城市 $x$，它想知道最近的安全城市的距离。</p>
-<p>$n,q \le 100000$</p>
-<p>其中有特殊点菊花图和链</p>
-<h3 id="开始想法-2"><a href="#开始想法-2" class="headerlink" title="开始想法"></a>开始想法</h3><p>搏一搏，单车变摩托</p>
-<p>直接最段路（其实想错了只有一条路直接搜索即可，我这反而凭空多一个 $\log$ ）来一波，没想到竟然搞过去了</p>
-<p>菊花图的数据搞错了……只有80</p>
-<h3 id="正解-2"><a href="#正解-2" class="headerlink" title="正解"></a>正解</h3><p>每一个线段树结点维护一棵区间内的标号的点形成的虚树，对于每次询问，拆分成 $\log(n)$段区间，然后分别询问。</p>
-<p>将询问离线处理，不妨将询问点都插入区间虚树中，然后对每个线段树的结点一次树形dp 来计算答案。</p>
-<p>线段树结点中虚树总点数为$(n+q)\log n$，加上构建虚树的复杂度，总复杂度$(n+q)\log^2n$</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/03/test0418/" data-id="ckb0bxo4c000drqgi7at7958x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/03/plan_for_hnoi2020/" data-id="ckb0c2c7800045ygi2zi04qw1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -543,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/03/test0523/" data-id="ckb0bxo3d0009rqgiaknfdrop" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/06/03/test0523/" data-id="ckb0c2c7d00085ygifhi10bzy" class="article-share-link">Share</a>
       
       
     </footer>
